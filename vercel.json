@@ -1,7 +1,7 @@
 {
   "version": 2,
   "env": {
-    "DATABASE_URL": "@DATABASE_URL"
+    "DATABASE_URL": "@mongo_uri"
   },
   "builds": [
     {
