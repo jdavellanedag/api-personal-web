@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Blog {
+  Date: DateTime!
+  Sumary: String!
+  Tags: [String!]!
+  Time: String!
+  Title: String!
+  _id: String!
+  urlEN: String!
+  urlES: String!
+}
+
+input BlogListInput {
+  Title: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  blog(title: String!): Blog!
+  blogById(_id: String!): Blog!
+  blogLatest: [Blog!]!
+  blogs(filters: BlogListInput): [Blog!]!
+}
