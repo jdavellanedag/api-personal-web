@@ -1,11 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { Tag } from 'src/interfaces/interfaces';
 
 export type PortfolioDocument = Portfolio & Document;
-
-interface Tag {
-  name: string;
-}
 
 @Schema()
 export class Portfolio {
