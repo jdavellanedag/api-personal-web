@@ -19,6 +19,10 @@ export class BlogService {
     return this.blogModel.findOne({ Title: title }).exec();
   }
 
+  blogBySlug(slug: string) {
+    return this.blogModel.findOne({ Slug: slug }).exec();
+  }
+
   list(filters: BlogListInput) {
     return this.blogModel.find({ ...filters }).exec();
   }

@@ -4,6 +4,7 @@
 
 type Blog {
   Date: DateTime!
+  Slug: String!
   Sumary: String!
   Tags: [String!]!
   Time: String!
@@ -25,6 +26,7 @@ scalar DateTime
 type Query {
   blog(title: String!): Blog!
   blogById(_id: String!): Blog!
+  blogBySlug(slug: String!): Blog!
   blogLatest: [Blog!]!
   blogs(filters: BlogListInput): [Blog!]!
 }
