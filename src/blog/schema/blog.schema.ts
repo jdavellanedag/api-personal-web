@@ -16,6 +16,10 @@ export class Blog {
   @Prop()
   Title: string;
 
+  @Field(() => String)
+  @Prop()
+  Slug: string;
+
   @Prop()
   @Field(() => Date)
   Date: Date;

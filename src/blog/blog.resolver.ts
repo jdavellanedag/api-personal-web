@@ -22,6 +22,11 @@ export class BlogResolver {
     return await this.blogService.blogById(id);
   }
 
+  @Query(() => Blog)
+  async blogBySlug(@Args('slug', { type: () => String }) slug: string) {
+    return await this.blogService.blogBySlug(slug);
+  }
+
   @Query(() => [Blog])
   async blogLatest() {
     return await this.blogService.latest();
